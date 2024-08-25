@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #4a4a4a; /* Grey background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    background-color: #333333; /* Dark grey header background */
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #bada55; /* Light green hover effect */
+    color: #333333; /* Dark text on hover */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    background-color: #333333; /* Dark grey background for hero section */
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.hero button {
+    background-color: #bada55; /* Light green button */
+    color: #333333; /* Dark text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #a8cc44; /* Slightly darker green on hover */
+}
+
+section {
+    padding: 50px 20px;
+    background-color: #4a4a4a; /* Grey background for sections */
+    color: #ffffff;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Flexbox container for horizontally aligned story cards */
+#stories .container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the story cards horizontally */
+    align-items: stretch; /* Ensure cards have equal height */
+}
+
+.story-card {
+    background-color: #333333; /* Dark grey background for story cards */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    overflow: hidden; /* Prevent overflow */
+    width: 300px; /* Fixed width for story cards */
+    box-sizing: border-box; /* Include padding and border in width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    background-color: #4d4d4d; /* Slightly lighter grey on hover */
+}
+
+.story-card img {
+    width: 100%; /* Make image take up the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px 10px 0 0; /* Round the top corners of the image */
+    margin-bottom: 15px;
+}
+
+.story-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.story-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.story-card a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.story-card button {
+    background-color: #bada55; /* Light green button */
+    color: #333333; /* Dark text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align button to the left */
+}
+
+.story-card button:hover {
+    background-color: #a8cc44; /* Slightly darker green on hover */
+}
+
+footer {
+    background-color: #333333; /* Dark grey footer background */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #bada55; /* Light green hover effect */
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .story-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.head2{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: #333333; /* Dark grey form background */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #bada55; /* Light green label color */
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #bada55; /* Light green border */
+    border-radius: 5px;
+    background-color: #4d4d4d; /* Dark grey input background */
+    color: #ffffff; /* White text */
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensure padding is included in the element's width */
+}
+
+form input:focus, form textarea:focus {
+    border-color: #a8cc44; /* Darker green on focus */
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 10px rgba(186, 218, 85, 0.5); /* Add a green glow effect */
+}
+
+form button {
+    background-color: #bada55; /* Light green button */
+    color: #333333; /* Dark text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+form button:hover {
+    background-color: #a8cc44; /* Slightly darker green on hover */
+}
+
+form button:active {
+    transform: scale(0.98); /* Add a slight press effect */
+}
